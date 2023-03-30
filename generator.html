@@ -33,14 +33,13 @@ td#padded {
         <form>
             No. of cards:
             <input type="text" id="cardNum" size="1" maxlength="2" value="12">
-            <br><br><input type="button" value="Draw" onclick="drawTraits()">
+            <br><br><input type="submit" value="Draw" onclick="drawTraits()">
         </form>
       </div>
         <div class="column right" id="output"></div>
         <div class="column" id="desc"></div>
     </div>
 
-    
      <script type="text/javascript">
      /* 
         TODO: Transport-kamat gear-listasta, descriptionit,
@@ -274,7 +273,7 @@ td#padded {
             {name:"Nitro (pint)", type:"explosives", malf:20, price:2.50, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Bacon (pound)", type:"foodDrink", malf:20, price:0.15, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Coffee (pound)", type:"foodDrink", malf:20, price:0.25, owned:0, elCheapo75:0, elCheapo50:0},
-            {name:"Trail rations (for a day)", type:"food", malf:20, price:0.50, owned:0, elCheapo75:0, elCheapo50:0},
+            {name:"Trail rations (for a day)", type:"foodDrink", malf:20, price:0.50, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Cheap bottle of liquor", type:"foodDrink", malf:20, price:2, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Good bottle of liquor", type:"foodDrink", malf:20, price:5, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Axe", type:"general", malf:20, price:2, owned:0, elCheapo75:0, elCheapo50:0},
@@ -328,7 +327,8 @@ td#padded {
             {name:"Saddle", type:"transport", malf:20, price:25, owned:0, elCheapo75:0, elCheapo50:0},
             {name:"Saddle bags", type:"transport", malf:20, price:5, owned:0, elCheapo75:0, elCheapo50:0}],
         notesHTML = '<br><p><b>Notes</b>&emsp;<input type=button value="Edit" ' +
-            'onclick="editNotes()"</p>', editMode = false;
+            'onclick="editNotes()"</p>',
+		editMode = false;
 
     function drawTraits() {
         var card = [],
