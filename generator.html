@@ -42,8 +42,7 @@ td#padded {
 
      <script type="text/javascript">
      /* 
-        TODO: Transport-kamat gear-listasta, descriptionit,
-            aseet joissa pistimet/veitset?, Arcane Background?,
+        TODO: Descriptionit, aseet joissa pistimet/veitset?, Arcane Background?,
             All Thumbs -apt. costit, Harrowed?, Mysterious Pasts?
             El Cheapo -kamat inventoreihin (ammot ja leMat't näkyviin?)
      */
@@ -1613,6 +1612,16 @@ td#padded {
         output += "<td><b><i>Hats</i></b></td></tr><tr>";
         for (i = 0; i < gear.length; i++) {
             if (gear[i].type == "hats") {
+            colNum++;
+            output += '<td><input type="button" value="Buy" onclick="buyGear(' + i +')"> ' +
+                gear[i].name + ", $" + gear[i].price.toFixed(2) + "&emsp;</td>";
+            if (colNum % 3 == 0) {output += "</tr><tr>";}
+        }}
+        if (colNum % 3 != 0) {output += "</tr>";}
+		colNum = 0
+		output += "<td><b><i>Transport</i></b></td></tr><tr>";
+        for (i = 0; i < gear.length; i++) {
+            if (gear[i].type == "transport") {
             colNum++;
             output += '<td><input type="button" value="Buy" onclick="buyGear(' + i +')"> ' +
                 gear[i].name + ", $" + gear[i].price.toFixed(2) + "&emsp;</td>";
