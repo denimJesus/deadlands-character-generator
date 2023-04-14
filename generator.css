@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.left {
+    width: 35%;
+}
+.right {
+    width: 65%;
+}
+td#padded {
+    padding: 10px;
+}
